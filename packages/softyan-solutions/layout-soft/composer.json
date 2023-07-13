@@ -1,0 +1,54 @@
+{
+    "name": "softyan-solutions/layout-soft",
+    "description": "Custom View Filament",
+    "keywords": [
+        "softyan-solutions",
+        "layout-soft"
+    ],
+    "homepage": "https://github.com/softyan-solutions/layout-soft",
+    "license": "The Unlicense",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Yayan Sopian",
+            "email": "yayansopiant@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.11.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SoftyanSolutions\\LayoutSoft\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SoftyanSolutions\\LayoutSoft\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SoftyanSolutions\\LayoutSoft\\LayoutSoftServiceProvider"
+            ],
+            "aliases": {
+                "LayoutSoft": "SoftyanSolutions\\LayoutSoft\\LayoutSoftFacade"
+            }
+        }
+    }
+}
